@@ -63,7 +63,7 @@ public class AccountManagmentController {
 	
 	@PutMapping("/{login}/role")
 	public Set<String> updateRolesList (@PathVariable String login,@RequestBody UserRoleDto userRoleDto ){
-		return accountService.updateRolesList(login, userRoleDto.getRole(), userRoleDto.isSet());
+		return accountService.updateRolesList(login, userRoleDto.getRole(), userRoleDto.isAddRole());
 	}
 	
 	
